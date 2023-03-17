@@ -1,17 +1,18 @@
 
-
 // intentos disponibles para adivinar
 let intentos = 6;
 
+
+
 let palabra = "APPLE";
 
-fetch('https://random-word-api.herokuapp.com/word?length=5&lang=en')
-	.then(response => response.json())
-	.then(response => {
-        console.log(response)
-        palabra = response[0].toUpperCase()
-    })
-	.catch(err => console.error(err));
+// fetch('https://random-word-api.herokuapp.com/word?length=5&lang=en')
+// 	.then(response => response.json())
+// 	.then(response => {
+//         console.log(response)
+//         palabra = response[0].toUpperCase()
+//     })
+// 	.catch(err => console.error(err));
 
 // siempre tenemos solo 5 caracteres
 // var wordle = ["X", "X", "X", "X", "X"];
@@ -47,8 +48,8 @@ function display (content){
   contenedor.innerHTML = content;
 }
 // Que pasa cuando se presiona el boton.
-var button = document.getElementById("guessbutton");
-button.addEventListener("click", addGrid); // llama a la funciona add grid
+// var button = document.getElementById("guessbutton");
+// button.addEventListener("click", addGrid); // llama a la funciona add grid
 
 function addBox(){
 
@@ -86,3 +87,14 @@ function addLetter(letter,color){
     span.style.backgroundColor = color;
     return span;
 }
+
+
+
+function sum(a,b){
+  return a+b
+}
+function subs(a,b){
+  return a+b
+}
+
+module.exports = sum;
